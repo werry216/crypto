@@ -29,14 +29,15 @@ function NavBar() {
 
   return (
   <div >
-  <AppBar position="static" >
-  <Tabs value={value} onChange={handleChange} centered>
-    <LinkTab label='Home' icon={ <HomeIcon />}  to="/" />
-    <LinkTab label='Development' icon={<CodeIcon />} to="/exchange" />
+  <AppBar position="static">
+           <Tabs>
+               <Tab label="exchange" to="/exchange" component={Link}  />
 
-    <LinkTab label='Product Management' icon={<TimelineIcon />}  to="/pm" />
-  </Tabs>
-</AppBar>
+               <Tab label="Home" to="/" component={Link}  />
+
+               <Tab label="Home" to="/pm" component={Link}  />
+           </Tabs>
+     </AppBar>
   </div>
 )
 };
@@ -46,7 +47,7 @@ const App = () => {
     <Router>
       <div>
 
-        <NavBar />
+        <NavBar  />
         <Switch>
           <Route exact path="/" component={ Coins} />
           <Route exact path="/exchange" component={ Exchanges } />
