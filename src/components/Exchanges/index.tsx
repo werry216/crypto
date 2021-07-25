@@ -11,6 +11,9 @@ import { SC } from "./styled";
 import { Pagination, Skeleton } from "@material-ui/lab";
 import { useQueryParams, NumberParam } from "use-query-params";
 
+import { makeStyles, withStyles } from '@material-ui/core/styles';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import LinearProgress from '@material-ui/core/LinearProgress';
 const CHART_BOX_SIZE = {
   height: 40,
   width: 150,
@@ -20,6 +23,21 @@ const INITIAL_QUERY_PARAMS = {
   per_page: 20,
   page: 1,
 };
+
+const BorderLinearProgress = withStyles((theme) => ({
+  root: {
+    height: 15,
+    width: 60,
+    borderRadius: 5,
+  },
+  colorPrimary: {
+    backgroundColor: theme.palette.grey[theme.palette.type === 'light' ? 200 : 700],
+  },
+  bar: {
+    borderRadius: 5,
+    backgroundColor: '#1a90ff',
+  },
+}))(LinearProgress);
 
 const MAX_PAGE_COUNT = 250;
 
@@ -54,10 +72,7 @@ const Exchanges = () => {
           <th align="left">Exchange</th>
           <th align="left">trade_volume_24h_btc</th>
           <th align="left">trade_volume_24h_btc_normalized</th>
-          <th align="left">7d %</th>
-          <th align="left">24h Volume</th>
-          <th align="left">Mkt Cap</th>
-          <th align="left">Last 7 days</th>
+          <th align="left">trust score</th>
         </SC.TableHeaderRow>
       </thead>
     );
@@ -95,7 +110,8 @@ const Exchanges = () => {
                   </SC.TableData>
 
                   <SC.TableData>
-                    {numeral(ele.trust_score).format("$0,0")}
+                        <BorderLinearProgress variant="determinate" value={ele.trust_score*10-1} />
+                      &nbsp;&nbsp;  {ele.trust_score}
                   </SC.TableData>
                 </SC.TableBodyRow>
               );

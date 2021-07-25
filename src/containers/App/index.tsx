@@ -4,6 +4,7 @@ import Coins from "containers/Coins";
 import PoweredBy from "components/PoweredBy";
 import MarketProvider from "store/MarketProvider";
 import Exchanges from "components/Exchanges";
+import Exchange from "components/Exchange";
 import { BrowserRouter as Router, Route, Redirect, Switch, Link, LinkProps } from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
@@ -31,10 +32,8 @@ function NavBar() {
   <div >
   <AppBar position="static">
            <Tabs>
-               <Tab label="exchange" to="/exchange" component={Link}  />
-
-               <Tab label="Home" to="/" component={Link}  />
-
+               <Tab label="Exchanges" to="/exchange" component={Link}  />
+               <Tab label="Coins" to="/" component={Link}  />
                <Tab label="Home" to="/pm" component={Link}  />
            </Tabs>
      </AppBar>
@@ -46,12 +45,15 @@ const App = () => {
   return (
     <Router>
       <div>
-
         <NavBar  />
         <Switch>
-          <Route exact path="/" component={ Coins} />
-          <Route exact path="/exchange" component={ Exchanges } />
-          <Route exact path="/pm" component={ Market } />
+          <Route exact path="/" component={Coins} />
+          <Route exact path="/exchange" component={Exchanges} />
+          <Route exact path="/market">
+           <MarketProvider>
+             <Market />
+           </MarketProvider>
+         </Route>
           <Redirect from="/" to="/" />
         </Switch>
       </div>
