@@ -9,12 +9,13 @@
 
 For this project, I used,
 
-- reactjs with typescript
+- reactjs and typescript
 - visx for visualization
 - styled-component for styling
 - coingecko api
-- material-ui for ui components.
+- material-ui for ui components .
 - and other libraries.
+
 
 
 # Getting Started with Create React App
