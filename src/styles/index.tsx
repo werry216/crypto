@@ -9,6 +9,9 @@ export enum ColorsEnum {
   red = "#FF4136",
 }
 
+
+
+
 export type ColorsType = keyof typeof ColorsEnum;
 
 export const theme: DefaultTheme = {
@@ -69,7 +72,7 @@ export const theme: DefaultTheme = {
     },
     tablet: {
       screenSize: "767px",
-      fontSize: "6px",
+      fontSize: "8px",
     },
     laptop: {
       screenSize: "991px",
