@@ -1,5 +1,7 @@
 ![Alt Text](./src/assets/dc.gif)
 
+
+![Alt Text](capture.png)
  Live demo : https://crypto-swart-five.vercel.app/ 
 
 (BUG !!   have to refresh page after clicking on coin for the graph to displayy)
