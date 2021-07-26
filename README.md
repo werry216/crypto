@@ -6,11 +6,8 @@
 <br></br>
 
 ![Alt Text](exchange.PNG)
- Live demo : https://crypto-swart-five.vercel.app/ 
 
-(BUG !!   have to refresh page after clicking on coin for the graph to displayy)
-
-For this project, I will be using,
+For this project, I used,
 
 - reactjs with typescript
 - visx for visualization
