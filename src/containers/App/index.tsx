@@ -34,7 +34,7 @@ function NavBar() {
            <Tabs>
                <Tab label="Exchanges" to="/exchange" component={Link}  />
                <Tab label="Coins" to="/" component={Link}  />
-               <Tab label="Home" to="/pm" component={Link}  />
+               <Tab label="Home" to="/" component={Link}  />
            </Tabs>
      </AppBar>
   </div>
