@@ -3,9 +3,9 @@
 <br></br>
 
 ![Alt Text](Coin.png)
+<br></br>
 
-
-![Alt Text](Exchange.PNG)
+![Alt Text](exchange.PNG)
  Live demo : https://crypto-swart-five.vercel.app/ 
 
 (BUG !!   have to refresh page after clicking on coin for the graph to displayy)
