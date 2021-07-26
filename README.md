@@ -16,7 +16,6 @@ For this project, I used,
 - material-ui for ui components.
 - and other libraries.
 
-Check out my blog on how i build this project https://dev.to/ayeprahman/how-i-build-crypto-tracker-chart-with-react-4k9h
 
 # Getting Started with Create React App
 
